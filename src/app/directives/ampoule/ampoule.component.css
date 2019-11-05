@@ -1,0 +1,16 @@
+.allume {
+  background-color: yellow;
+  color: black;
+}
+
+.eteinte {
+  background-color: black;
+  color: white;
+}
+
+.ampoule{
+  height: 150px;
+  width: 150px;
+  border: 1px black solid;
+  padding: 50px;
+}

@@ -14,7 +14,8 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.personnes = [
       new Personne(1, 'sellaouti','aymen',37,7777,'Teacher', 'as.jpg'),
-      new Personne(2, 'sellaouti','skander',1,88888,'kid', 'as.jpg'),
+      new Personne(2, 'sellaouti','skander',1,88888,'kid', ''),
+      new Personne(2, 'sellaouti','skander',1,88888,'kid', '     '),
     ];
   }
   sendPersonneToCv(personne: Personne) {

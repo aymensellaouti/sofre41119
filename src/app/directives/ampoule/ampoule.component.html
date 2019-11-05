@@ -1,0 +1,10 @@
+<div appHighlight [in]="'blue'" [out]="'pink'" class="ampoule" (click)="allumeEteint()" [ngClass]="{
+  allume : isAllume,
+  eteinte: !isAllume
+}">
+  Ampoule
+</div>
+<button>Eteindre</button>
+
+<p appHighlight>Test highlight</p>
+<input [initColor]="'green'"  type="text" appRainbow>
