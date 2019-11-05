@@ -20,5 +20,4 @@ export class SecondComponent implements OnInit {
       'Hello From Son'
     );
   }
-
 }

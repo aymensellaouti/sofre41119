@@ -8,6 +8,10 @@ import { SecondComponent } from './second.component';
 import { ColorComponent } from './color/color.component';
 import {FormsModule} from '@angular/forms';
 import { CardComponent } from './card/card.component';
+import { CvComponent } from './cv/cv/cv.component';
+import { ListComponent } from './cv/list/list.component';
+import { ItemComponent } from './cv/item/item.component';
+import { DetailComponent } from './cv/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { CardComponent } from './card/card.component';
     FirstComponent,
     SecondComponent,
     ColorComponent,
-    CardComponent
+    CardComponent,
+    CvComponent,
+    ListComponent,
+    ItemComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
