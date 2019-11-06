@@ -1,0 +1,30 @@
+<form #formulaire="ngForm">
+  <label for="email">Email</label>
+  <input id="email"
+         type="text"
+         class="form-control"
+         ngModel
+         required
+         pattern="{{emailpattern}}"
+         name="email"
+         #email="ngModel"
+  >
+  <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+    Email Invalid
+  </div>
+  <label for="pwd">Password</label>
+  <input id="pwd"
+         type="password"
+         class="form-control"
+         ngModel
+         name="password"
+         required
+  >
+</form>
+
+<button
+  [disabled]="formulaire.invalid"
+  (click)="login(formulaire)"
+  class="btn btn-dark">
+  Login
+</button>

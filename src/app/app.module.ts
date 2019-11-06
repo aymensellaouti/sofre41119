@@ -20,6 +20,14 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from '../assets/images/default-image.pipe';
 import {LoggerService} from './services/logger.service';
 import { TodoComponent } from './todo/todo.component';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
+import { HeaderComponent } from './header/header.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
+import { AdminComponent } from './admin/admin.component';
+import { FrontComponent } from './front/front.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +46,15 @@ import { TodoComponent } from './todo/todo.component';
     HighlightDirective,
     RainbowDirective,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent,
+    HeaderComponent,
+    RouterSimulatorComponent,
+    DetailCvComponent,
+    AdminComponent,
+    FrontComponent,
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

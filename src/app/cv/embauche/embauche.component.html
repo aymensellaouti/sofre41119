@@ -1,0 +1,16 @@
+<div *ngIf="personnes.length">
+  <h1>
+    Liste des cvs séléctionnés pour embauche
+  </h1>
+  <div class="list">
+    <span *ngFor="let personne of personnes">
+      <img
+        src="assets/images/{{personne.path|defaultImage}}"
+        alt="{{personne.nom}}"
+        width = "150px"
+        height= "150px"
+        class="rounded-circle"
+      > {{personne.nom}}
+    </span>
+  </div>
+</div>
