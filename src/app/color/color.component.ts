@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoService} from '../services/todo.service';
 
 @Component({
   selector: 'app-color',
   templateUrl: './color.component.html',
-  styleUrls: ['./color.component.css']
+  styleUrls: ['./color.component.css'],
+  providers: [TodoService]
 })
 export class ColorComponent implements OnInit {
   defaultColor = 'red';
   color: string;
-  constructor() {
+  constructor(
+    private todoService: TodoService
+  ) {
     this.color = this.defaultColor;
   }
 
@@ -20,5 +24,6 @@ export class ColorComponent implements OnInit {
   }
   resetColor() {
     this.color = this.defaultColor;
+    this.todoService.loggerTodo();
   }
 }
