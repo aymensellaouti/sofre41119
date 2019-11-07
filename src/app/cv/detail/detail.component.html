@@ -9,8 +9,8 @@
       </div>
       <div class="content">
         <div class="main">
-          <h3 class="name">{{personne?.nom}} {{personne?.prenom}}</h3>
-          <p class="profession">{{personne?.Job}}</p>
+          <h3 class="name">{{personne?.name}} {{personne?.firstname}}</h3>
+          <p class="profession">{{personne?.job}}</p>
           <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
         </div>
         <div class="footer">
@@ -57,6 +57,12 @@
             (click)="embaucher()"
           >
             Embaucher
+          </button>
+          <button
+            class="btn btn-success"
+            (click)="goToDetail()"
+          >
+            Détails
           </button>
         </div>
       </div>

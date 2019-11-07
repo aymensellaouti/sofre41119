@@ -20,7 +20,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'admin',
+    path: '',
     component: AdminComponent,
     children: [
       {path: 'todo', component: TodoComponent},

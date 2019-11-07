@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {strictEqual} from 'assert';
+import {filter, map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-observable',
@@ -45,7 +46,10 @@ export class ObservableComponent implements OnInit {
         observer.next(i--);
       }, 1000);
     });
-    observable.subscribe((val) => {
+    observable.pipe(
+      map(x => x = x * 7),
+      filter( x => !(x % 2))
+    ).subscribe((val) => {
       console.log(val);
     },
       (erreur) => {},

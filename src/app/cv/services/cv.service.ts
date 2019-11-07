@@ -1,23 +1,31 @@
 import { Injectable } from '@angular/core';
 import {Personne} from '../Model/personne';
 import {timeout} from 'rxjs/operators';
-
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+const API_PATH = 'http://172.16.144.70:3000/api/personnes';
 @Injectable({
   providedIn: 'root'
 })
 export class CvService {
   personnes: Personne[];
-  constructor() {
-    this.personnes = [
+  fakeData: Personne[];
+  constructor(
+    private http: HttpClient
+  ) {
+    this.fakeData = [
       new Personne(1, 'sellaouti', 'aymen', 37, 7777, 'Teacher', 'as.jpg'),
       new Personne(2, 'sellaouti', 'skander', 1, 88888, 'kid', ''),
       new Personne(2, 'sellaouti', 'skander', 1, 88888, 'kid', '     '),
     ];
   }
-  getPersonnes(): Personne[] {
-    return this.personnes;
+  getPersonnes(): Observable<Personne[]> {
+    return this.http.get<Personne[]>(API_PATH);
   }
-  findPersonneById(id): Personne {
-    return this.personnes.find((personne) => personne.id === +id);
+  getFakeData(): Personne[] {
+    return  this.fakeData;
+  }
+  findPersonneById(id): Observable<Personne> {
+    return this.http.get<Personne>(API_PATH + `/${id}`);
   }
 }

@@ -29,6 +29,8 @@ import { FrontComponent } from './front/front.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { ObservableComponent } from './observable/observable.component';
+import { HttpTestComponent } from './http-test/http-test.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,12 +58,14 @@ import { ObservableComponent } from './observable/observable.component';
     FrontComponent,
     NotFoundComponent,
     LoginComponent,
-    ObservableComponent
+    ObservableComponent,
+    HttpTestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
