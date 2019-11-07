@@ -15,7 +15,7 @@ export class EmbaucheService {
     if (index < 0) {
       this.hiredList.push(personne);
     } else {
-      alert(`${personne.nom} is already hired`);
+      alert(`${personne.name} is already hired`);
     }
   }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Personne} from '../Model/personne';
 import {timeout} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 const API_PATH = 'http://172.16.144.70:3000/api/personnes';
 @Injectable({
   providedIn: 'root'
@@ -27,5 +27,13 @@ export class CvService {
   }
   findPersonneById(id): Observable<Personne> {
     return this.http.get<Personne>(API_PATH + `/${id}`);
+  }
+  deletePersonneById(id): Observable<any> {
+    // const token = localStorage.getItem('token');
+    // if (token) {
+    //   const headers = new HttpHeaders().set('Authorization', token);
+    //   return this.http.delete<any>(API_PATH + `/${id}`, {headers});
+    // }
+    return this.http.delete<any>(API_PATH + `/${id}`);
   }
 }

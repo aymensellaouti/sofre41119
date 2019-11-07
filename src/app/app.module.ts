@@ -31,6 +31,9 @@ import { LoginComponent } from './login/login.component';
 import { ObservableComponent } from './observable/observable.component';
 import { HttpTestComponent } from './http-test/http-test.component';
 import {HttpClientModule} from '@angular/common/http';
+import {AuthentificationInterceptorProvider} from './interceptors/authInterceptors.interceptor';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import {LoginGuard} from './guards/login-guard';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,8 @@ import {HttpClientModule} from '@angular/common/http';
     NotFoundComponent,
     LoginComponent,
     ObservableComponent,
-    HttpTestComponent
+    HttpTestComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,10 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthentificationInterceptorProvider,
+    LoginGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

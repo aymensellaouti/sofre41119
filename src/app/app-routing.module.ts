@@ -9,11 +9,18 @@ import {FrontComponent} from './front/front.component';
 import {AdminComponent} from './admin/admin.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {LoginComponent} from './login/login.component';
+import {AddPersonneComponent} from './cv/add-personne/add-personne.component';
+import {LoginGuard} from './guards/login-guard';
 
 const routes: Routes = [
   {path: '',
     component: FrontComponent,
     children: [
+      {
+        path: 'cv/add',
+        component: AddPersonneComponent,
+        canActivate: [LoginGuard]
+      },
       {path: 'cv/:id', component: DetailCvComponent},
       {path: 'cv', component: CvComponent},
       {path: 'login', component: LoginComponent}
