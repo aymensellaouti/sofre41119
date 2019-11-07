@@ -28,6 +28,7 @@ import { AdminComponent } from './admin/admin.component';
 import { FrontComponent } from './front/front.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { LoginComponent } from './login/login.component';
     AdminComponent,
     FrontComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
